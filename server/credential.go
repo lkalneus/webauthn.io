@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"strings"
 
-	log "github.com/duo-labs/webauthn.io/logger"
-	"github.com/duo-labs/webauthn.io/models"
-	"github.com/duo-labs/webauthn/protocol"
-	"github.com/duo-labs/webauthn/webauthn"
 	"github.com/gorilla/mux"
+	log "github.com/lkalneus/webauthn.io/logger"
+	"github.com/lkalneus/webauthn.io/models"
+	"github.com/lkalneus/webauthn/protocol"
+	"github.com/lkalneus/webauthn/webauthn"
 )
 
 // RequestNewCredential begins a Credential Registration Request, returning a
@@ -49,7 +49,7 @@ func (ws *Server) RequestNewCredential(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	credentialOptions, sessionData, err := ws.webauthn.BeginRegistration(user,
+	credentialOptions, sessionData, err := ws.webauthn.BeginRegistration(user, "",
 		webauthn.WithAuthenticatorSelection(
 			protocol.AuthenticatorSelection{
 				AuthenticatorAttachment: protocol.AuthenticatorAttachment(authType),

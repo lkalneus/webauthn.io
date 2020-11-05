@@ -4,8 +4,8 @@ import (
 	"encoding/base64"
 	"encoding/binary"
 
-	log "github.com/duo-labs/webauthn.io/logger"
-	"github.com/duo-labs/webauthn/webauthn"
+	log "github.com/lkalneus/webauthn.io/logger"
+	"github.com/lkalneus/webauthn/webauthn"
 	"github.com/jinzhu/gorm"
 )
 

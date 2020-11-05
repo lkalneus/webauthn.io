@@ -5,10 +5,10 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/duo-labs/webauthn.io/config"
-	log "github.com/duo-labs/webauthn.io/logger"
-	"github.com/duo-labs/webauthn.io/models"
-	"github.com/duo-labs/webauthn.io/server"
+	"github.com/lkalneus/webauthn.io/config"
+	log "github.com/lkalneus/webauthn.io/logger"
+	"github.com/lkalneus/webauthn.io/models"
+	"github.com/lkalneus/webauthn.io/server"
 )
 
 func main() {

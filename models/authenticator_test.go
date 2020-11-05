@@ -1,6 +1,6 @@
 package models
 
-import "github.com/duo-labs/webauthn/webauthn"
+import "github.com/lkalneus/webauthn/webauthn"
 
 func (ms *ModelsSuite) TestUpdateAuthenticatorSignCount() {
 	a := webauthn.Authenticator{

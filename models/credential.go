@@ -9,12 +9,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/duo-labs/webauthn/protocol/webauthncose"
+	"github.com/lkalneus/webauthn/protocol/webauthncose"
 
-	"github.com/duo-labs/webauthn/webauthn"
+	"github.com/lkalneus/webauthn/webauthn"
 	"github.com/jinzhu/gorm"
 
-	log "github.com/duo-labs/webauthn.io/logger"
+	log "github.com/lkalneus/webauthn.io/logger"
 )
 
 // Credential is the stored credential for Auth

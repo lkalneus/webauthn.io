@@ -5,12 +5,12 @@ import (
 	"errors"
 	"net/http"
 
-	log "github.com/duo-labs/webauthn.io/logger"
-	"github.com/duo-labs/webauthn.io/models"
-	"github.com/duo-labs/webauthn/protocol"
-	"github.com/duo-labs/webauthn/webauthn"
 	"github.com/gorilla/mux"
 	"github.com/jinzhu/gorm"
+	log "github.com/lkalneus/webauthn.io/logger"
+	"github.com/lkalneus/webauthn.io/models"
+	"github.com/lkalneus/webauthn/protocol"
+	"github.com/lkalneus/webauthn/webauthn"
 )
 
 // ErrCredentialCloned occurs when an authenticator provides a sign count
@@ -42,7 +42,7 @@ func (ws *Server) GetAssertion(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	assertion, sessionData, err := ws.webauthn.BeginLogin(user,
+	assertion, sessionData, err := ws.webauthn.BeginLogin(user, "",
 		webauthn.WithUserVerification(protocol.UserVerificationRequirement(userVerification)),
 		webauthn.WithAssertionExtensions(testExtension),
 	)

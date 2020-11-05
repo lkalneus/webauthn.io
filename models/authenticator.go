@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/duo-labs/webauthn/webauthn"
+	"github.com/lkalneus/webauthn/webauthn"
 	"github.com/jinzhu/gorm"
 )
 
